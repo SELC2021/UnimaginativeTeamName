@@ -1,3 +1,5 @@
+
+  
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,11 +24,11 @@ body, html {
   cursor: pointer;
   padding: 14px 1px;
   font-size: 17px;
-  width: 100px;
+  width: 150px;
 }
 .indent{
 
-  padding-left: 1136px; /* Fix to adapt to browser/screen width */
+  padding-left: 936px; /* Fix to adapt to browser/screen width */
   }
 
 .tablink:hover {
@@ -43,22 +45,18 @@ body, html {
 
 #Classes {background-color: purple;}
 #Assignments {background-color: navy;}
-#Home {background-color: maroon;}
-#News {background-color: green;}
-#Contact {background-color: blue;}
-#About {background-color: rgb(245, 190, 88);}
+#Announcements {background-color: rgb(54, 18, 71);}
+#Current {background-color: maroon;}
+#Undated {background-color: green;}
+#Future {background-color: blue;}
+#Overdue {background-color: rgb(245, 190, 88);}
 </style>
 </head>
 <body>
 
 <button class="tablink" onclick="openPage('Classes', this, 'purple')">Classes</button>
 <button class="tablink" onclick="openPage('Assignments', this, 'navy')" id="defaultOpen">Assignments</button>
-<div class="indent">
-<button class="tablink" onclick="openPage('Home', this, 'maroon')">Home</button>
-<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
-</div>
+<button class="tablink" onclick="openPage('Announcements', this, 'rgb(54, 18, 71)')" id="defaultOpen">Announcements</button>
 <div id="Classes" class="tabcontent">
   <h3>Classes</h3>
   <p>all your stuff</p>
@@ -66,25 +64,80 @@ body, html {
 <div id="Assignments" class="tabcontent">
   <h3>Assignments</h3>
   <p>to-do stuff</p>
-</div>
-<div id="Home" class="tabcontent">
-  <h3>Home</h3>
-  <p>Home is where the heart is..</p>
-</div>
-
-<div id="News" class="tabcontent">
-  <h3>News</h3>
-  <p>Some news this fine day!</p> 
+  <div class="indent">
+    <button class="tablink" onclick="openPage('Current', this, 'maroon')">Current</button>
+    <button class="tablink" onclick="openPage('Undated', this, 'green')" id="defaultOpen">Undated</button>
+    <button class="tablink" onclick="openPage('Future', this, 'blue')">Future</button>
+    <button class="tablink" onclick="openPage('Overdue', this, 'orange')">Overdue</button>
+    </div>
 </div>
 
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>Get in touch, or swing by for a cup of coffee.</p>
+<div id="Announcements" class="tabcontent">
+  <h3>Announcements</h3>
+  <p>teacher sayings</p>
+
+ 
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    
+    }
+    th, td {
+      padding: 5px;
+    }
+    th {
+      text-align: center;
+    }
+    </style>
+  <table style="width:100%">
+    
+    <tr>
+      <th></th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+
+    </tr>
+    <tr>
+      <th>SE186x</th>
+    </tr>
+    
+    <tr>
+      <th>COMS 227</th>
+    </tr>
+    
+    <tr> 
+      <th>ENG 150</th>
+    </tr>
+     
+    
+    <tr>
+      <th>Math 166</th> 
+    </tr>
+
+
+</div>
+<div id="Current" class="tabcontent">
+  <h3>Current</h3>
+  <p>you got stuff due</p>
 </div>
 
-<div id="About" class="tabcontent">
-  <h3>About</h3>
-  <p>Who we are and what we do.</p>
+<div id="Undated" class="tabcontent">
+  <h3>Undated</h3>
+  <p>stuff for who knows when</p> 
+</div>
+
+<div id="Future" class="tabcontent">
+  <h3>Future</h3>
+  <p>stuff for later</p>
+</div>
+
+<div id="Overdue" class="tabcontent">
+  <h3>Overdue</h3>
+  <p>yer late</p>
 </div>
 
 <script>
