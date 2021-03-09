@@ -25,8 +25,8 @@ body, html {
   width: 150px;
 }
 .indent{
-
-  padding-left: 936px; /* Fix to adapt to browser/screen width */
+  float: right;
+  /*padding-left: 936px; /* Fix to adapt to browser/screen width */
   }
 
 .tablink:hover {
@@ -59,36 +59,60 @@ body, html {
   <h3>Classes</h3>
   <p>all your stuff</p>
 </div>
-<div id="Assignments" class="tabcontent">
-  <h3>Assignments</h3>
-  <p>to-do stuff</p>
-  <div class="indent">
+<div id="Assignments" class="tabcontent"> <!-- make assignment tab highlighted in inside tabs -->
+  <div class="indent">                    <!-- redirect assignment tab to 'current' tab -->  <!-- no text in assignment tab -->
     <button class="tablink" onclick="openPage('Current', this, 'maroon')">Current</button>
     <button class="tablink" onclick="openPage('Undated', this, 'green')" id="defaultOpen">Undated</button>
     <button class="tablink" onclick="openPage('Future', this, 'blue')">Future</button>
     <button class="tablink" onclick="openPage('Overdue', this, 'orange')">Overdue</button>
     </div>
+  <h3 style="padding-top:40px;">Assignments</h3>
+  <p>to-do stuff</p>
 </div>
 <div id="Announcements" class="tabcontent">
   <h3>Announcements</h3>
   <p>teacher sayings</p>
 </div>
 <div id="Current" class="tabcontent">
+  <div class="indent">
+    <button class="tablink" onclick="openPage('Current', this, 'maroon')">Current</button>
+    <button class="tablink" onclick="openPage('Undated', this, 'green')" id="defaultOpen">Undated</button>
+    <button class="tablink" onclick="openPage('Future', this, 'blue')">Future</button>
+    <button class="tablink" onclick="openPage('Overdue', this, 'orange')">Overdue</button>
+    </div>
   <h3>Current</h3>
   <p>you got stuff due</p>
 </div>
 
 <div id="Undated" class="tabcontent">
+  <div class="indent">
+    <button class="tablink" onclick="openPage('Current', this, 'maroon')">Current</button>
+    <button class="tablink" onclick="openPage('Undated', this, 'green')" id="defaultOpen">Undated</button>
+    <button class="tablink" onclick="openPage('Future', this, 'blue')">Future</button>
+    <button class="tablink" onclick="openPage('Overdue', this, 'orange')">Overdue</button>
+    </div>
   <h3>Undated</h3>
   <p>stuff for who knows when</p> 
 </div>
 
 <div id="Future" class="tabcontent">
+  <div class="indent">
+    <button class="tablink" onclick="openPage('Current', this, 'maroon')">Current</button>
+    <button class="tablink" onclick="openPage('Undated', this, 'green')" id="defaultOpen">Undated</button>
+    <button class="tablink" onclick="openPage('Future', this, 'blue')">Future</button>
+    <button class="tablink" onclick="openPage('Overdue', this, 'orange')">Overdue</button>
+    </div>
   <h3>Future</h3>
   <p>stuff for later</p>
 </div>
 
 <div id="Overdue" class="tabcontent">
+  <div class="indent">
+    <button class="tablink" onclick="openPage('Current', this, 'maroon')">Current</button>
+    <button class="tablink" onclick="openPage('Undated', this, 'green')" id="defaultOpen">Undated</button>
+    <button class="tablink" onclick="openPage('Future', this, 'blue')">Future</button>
+    <button class="tablink" onclick="openPage('Overdue', this, 'orange')">Overdue</button>
+    </div>
   <h3>Overdue</h3>
   <p>yer late</p>
 </div>
@@ -106,6 +130,10 @@ function openPage(pageName,elmnt,color) {
   }
   document.getElementById(pageName).style.display = "block";
   elmnt.style.backgroundColor = color;
+  /*if(pageName = 'Current' || 'Undated' || 'Future' || 'Overdue'){       does not work :D
+    var filled = document.getElementById("Assignments")
+    filled.style.backgroundColor = "navy"
+  }*/
 }
 
 // Get the element with id="defaultOpen" and click on it
