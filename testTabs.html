@@ -10,7 +10,9 @@
 
       <script>
          $(function() {
-            $( "#tabs-1").tabs();
+            $( "#tabs-1").tabs({
+               heightStyle: "auto"
+            });      //{heightStyle: "fill"}
          });
          $(function() {
             $("#tabs-3").tabs();
@@ -18,12 +20,18 @@
       </script>
 		
       <style>
-         #tabs-1{font-size: 14px;}
+         #tabs-1{
+            font-size: 14px;
+         }
          .ui-widget-header {
-            background:#b9cd6d;
-            border: 1px solid #b9cd6d;
+            background:#eb9e2b;
+            border: 1px solid #eb9e2b;
             color: #FFFFFF;
             font-weight: bold;
+         }
+         .ui-widget-content{
+            background: #ffa5008c;
+            height: 100%;
          }
       </style>
    </head>
@@ -31,9 +39,9 @@
    <body>
       <div id = "tabs-1">
          <ul>
-            <li><a href = "#tabs-2">Tab 1</a></li>
-            <li><a href = "#tabs-3">Tab 2</a></li>
-            <li><a href = "#tabs-4">Tab 3</a></li>
+            <li><a href = "#tabs-2">Classes</a></li>
+            <li><a href = "#tabs-3">Assignments</a></li>
+            <li><a href = "#tabs-4">Announcements</a></li>
          </ul>
          <div id = "tabs-2">
             <p>
@@ -44,9 +52,10 @@
          <div id = "tabs-3">
             
                <ul>
-                  <li><a href = "#tabs-5">Mini Tab 1</a></li>
-                  <li><a href = "#tabs-6">Mini Tab 2</a></li>
-                  <li><a href = "#tabs-7">Mini Tab 3</a></li>
+                  <li><a href = "#tabs-5">Current</a></li>
+                  <li><a href = "#tabs-6">Undated</a></li>
+                  <li><a href = "#tabs-7">Future</a></li>
+                  <li><a href = "#tabs-8">Overdue</a></li>
                </ul>
                <div id = "tabs-5">
                   <p>
@@ -78,6 +87,11 @@
                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
                      nisi ut aliquip ex ea commodo consequat.
                   </p>
+               </div>
+               <div id = "tabs-8">
+                  <p>
+                     late stuff
+                  </p>	
                </div>
             
          </div>
